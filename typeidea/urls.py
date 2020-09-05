@@ -22,6 +22,7 @@ from blog.views import (
     PostDetailView, SearchView,
     AuthorView)
 from config.views import LinkListView
+from comment.views import CommentView
 from typeidea.custom_site import custom_site
 
 urlpatterns = [
@@ -34,4 +35,5 @@ urlpatterns = [
     url(r'^links/$', LinkListView.as_view(), name='links'),
     url(r'^super_admin/', admin.site.urls, name='super-admin'),
     url(r'^admin/', custom_site.urls, name='admin'),
+    url(r'^comment/$', CommentView.as_view(), name='comment'),
 ]
