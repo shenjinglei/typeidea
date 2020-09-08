@@ -90,7 +90,7 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
         self.content_html = mistune.markdown(self.content)
-        super.save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     @staticmethod
     def get_by_tag(tag_id):
